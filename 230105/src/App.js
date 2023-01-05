@@ -17,7 +17,7 @@ import Ex2 from "./components/Ex2";
 //   // function inEnglish() {
 //   //   const spanEl = document.querySelector(".App>span");
 //   //   spanEl.innerHTML = "tetz";
-//   // teacher = "tetz";d
+//   // teacher = "tetz";ds
 //   // console.log(teacher);
 //   // }
 
