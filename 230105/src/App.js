@@ -4,6 +4,10 @@ import { useState } from "react";
 import Ex1 from "./components/Ex1";
 import Condition from "./components/Condition";
 import Ex2 from "./components/Ex2";
+import ClassState from "./components/ClassState";
+import StateAndVariable from "./components/StateAndVariable";
+import ArrState from "./components/ArrState";
+import ObjState from "./components/ObjState";
 
 // function App() {
 //   // let teacher = "이효석";
@@ -17,7 +21,7 @@ import Ex2 from "./components/Ex2";
 //   // function inEnglish() {
 //   //   const spanEl = document.querySelector(".App>span");
 //   //   spanEl.innerHTML = "tetz";
-//   // teacher = "tetz";d
+//   // teacher = "tetz";
 //   // console.log(teacher);
 //   // }
 
@@ -34,7 +38,7 @@ import Ex2 from "./components/Ex2";
 function App() {
   return (
     <div className="App">
-      <Ex2 />
+      <ObjState />
     </div>
   );
 }

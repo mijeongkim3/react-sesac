@@ -12,3 +12,5 @@ export default function Condition() {
     </div>
   );
 }
+
+// ?물음표가 트루 :가 거짓
