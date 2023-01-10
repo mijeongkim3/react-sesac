@@ -22,4 +22,4 @@ export default function Ex8() {
   )
 }
 
-//app.js에서 ex8불러오면됨 이게부모...
+//app.js에서 ex8불러오면됨 이게부모...,.
