@@ -10,3 +10,4 @@ export default function CustomList(props) {
 }
 
 //callcustomlist에서 불러온다 배열을 전달 !
+//자손

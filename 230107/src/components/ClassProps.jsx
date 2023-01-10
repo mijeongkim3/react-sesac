@@ -12,3 +12,5 @@ export default class ClassProps extends Component {
     )
   }
 }
+
+//자손 이고 부모는 메모장(app.js)
