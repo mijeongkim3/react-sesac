@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 export default function PracticeTimmer() {
   const [render, setRender] = useState(false);
-  const time = useRef(0); //0초부터 시작....
+  const time = useRef(0); //0초부터 시작.....
 
   useEffect(() => {
     const timer = setInterval(() => {
