@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.0/redux.min.js"></script>
+
+        <style>
+            .container {
+                border: 3px solid black;
+                padding: 10px;
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="red">
+            <div class="container" id="component_red">
+                <h1>red</h1> 
+                <input type="button" value="실행" onclick="store.dispatch({type: 'CHANGE', color:'red'})"> 
+            </div>
+            <!-- 이 디브하나하나가 하나의 컴포넌트라고 생각해야됨 . 리덕스를통해 각자의 디브가 개별적으로 실행되기땜에 리덕스쓰는거임. 
+                버튼클릭시 디스패치함수실행해서 그게 리듀서 실행하고 값을바꿔줄거임 디스패치실행할때, 액션으로 체인지라는 타입과 컬러레드를 담아서 던질거임 -->
+        </div>
+        <div id="green">
+            <div class="container" id="component_green">
+                <h1>green</h1>
+                <input type="button" value="실행" onclick="store.dispatch({type: 'CHANGE', color:'green'})">
+            </div>
+        </div>
+        <div id="yellow">
+            <div class="container" id="component_yellow">
+                <h1>yellow</h1>
+                <input type="button" value="실행" onclick="store.dispatch({type: 'CHANGE', color:'yellow'})">
+            </div>
+        </div>
+        <script>
+            function reducer(state = {color:'orange'}, action){ //현재상태를 orange로 기본값설정
+                console.log(action);
+                if (action.type == 'CHANGE' ) return { color:action.color}; //이건 순수리덕스라서 여기까지만 하면 리랜더링이안됨.빨강색이안나옴.그래서 섭스크라이브써야됨
+                return state; //변경된 스테이트를 리턴해준다 
+
+
+            }
+            var store = Redux.createStore(reducer);
+            function red(){
+                var state = store.getState(); //getstate를이용해서 값을가져오고 그 값으로 컴포넌트레드으 ㅣ값을 바꾼다!
+
+                document.querySelector('#component_red').style.backgroundColor = state.color; //컴포넌트레드의값을 현재 스테이트에있는 색으로 바꾼다 오렌지!
+               
+            }
+
+            function green(){
+                var state = store.getState(); //getstate를이용해서 값을가져오고 그 값으로 컴포넌트레드으 ㅣ값을 바꾼다!
+
+                document.querySelector('#component_green').style.backgroundColor = state.color; //컴포넌트레드의값을 현재 스테이트에있는 색으로 바꾼다 오렌지!
+               
+            }
+
+            function yellow(){
+                var state = store.getState(); //getstate를이용해서 값을가져오고 그 값으로 컴포넌트레드으 ㅣ값을 바꾼다!
+
+                document.querySelector('#component_yellow').style.backgroundColor = state.color; //컴포넌트레드의값을 현재 스테이트에있는 색으로 바꾼다 오렌지!
+               
+            }
+
+            // function green(){
+            //     document.querySelector('#component_red').style.backgroundColor = 'green';
+            //     document.querySelector('#component_green').style.backgroundColor = 'green';
+            //     document.querySelector('#component_yellow').style.backgroundColor = 'green';
+            // }
+            // function yellow(){
+            //     document.querySelector('#component_red').style.backgroundColor = 'yellow';
+            //     document.querySelector('#component_green').style.backgroundColor = 'yellow';
+            //     document.querySelector('#component_yellow').style.backgroundColor = 'yellow';
+            // }
+
+            // function change(){
+            //     var state = store.getState(); //getstate를이용해서 값을가져오고 그 값으로 컴포넌트레드으 ㅣ값을 바꾼다!
+            //     document.querySelector('#component_red').style.backgroundColor = state.color;
+            //     document.querySelector('#component_green').style.backgroundColor = state.color;
+            //     document.querySelector('#component_yellow').style.backgroundColor = state.color;
+               
+            // }
+
+
+            alert( store.getState().color); //getstate는 스테이트에 저장된정보를 가져온느 친구임
+            store.subscribe(red); //red라는 함수를 실행해서 색이 바뀌게한다. 이 red는 fucntion.red함수를 의미하는거임
+            // store.subscribe(change);
+            store.subscribe(green);
+            store.subscribe(yellow);
+        </script>
+    </body>
+</html>
+
+<!-- 순수리덕스 -->
