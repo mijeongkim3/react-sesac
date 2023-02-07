@@ -26,4 +26,4 @@ export default function Test() {
     </>
   );
 }
-// weihgt는 index.js에 있는 reducer에서(?)있는 곳으로부터왔다///////..
+// weihgt는 index.js에 있는 reducer에서(?)있는 곳으로부터왔다///////....
