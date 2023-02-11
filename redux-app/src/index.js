@@ -23,7 +23,7 @@ let store = createStore(reducer); //리덕스 쓰려면 필요한코드 리듀�
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  //스토어는 위에서만든 스토어다 라는 뜻
+  //스토어는 위에서만든 스토어다 라는 뜻.
   <Provider store={store}>
     <App />
   </Provider>
