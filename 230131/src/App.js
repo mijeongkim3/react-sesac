@@ -27,7 +27,7 @@ export default function App() {
       //  state.push(action.payload); 이렇게 두줄 쓰면 안먹힘. 배열은 복제가 안됨. 리듀서가 스테이트 반환하는데 그럼 주소값이 같다고 생각해서 랜더링을 하지 않음. 셋스테이트에서도 주소가 동일하면 랜더링을 하지않음 그래서 전개연산자를 통해서 새로만들어줘야됨 전개연산자는 새로 전개해서 새로운 배열에 넣겠다는 뜻임. 그래야 리랜더링됨
       //  return state;
 
-      //var newState = Object.assign(state); 이건 재할당!전개연산자 대신 이거 세줄써도됨
+      //var newState = Object.assign(state); 이건 재할당!전개연산자 대신 이거 세줄써도됨..
       //newState.push(action.payload);
       //return newState;
     }
