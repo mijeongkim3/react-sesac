@@ -17,4 +17,4 @@ export default function DoneList() {
     </section>
   );
 }
-//이거나중에 코드 확인하기. 놓침.,d,.
+//이거나중에 코드 확인하기. 놓침.,d,...
